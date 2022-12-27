@@ -13,10 +13,10 @@ dependencies:
 
   bldrs_theme:
     git:
-      url: https://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@github.com/Bldrs-net/bldrs_theme.git
+      url: https://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@github.com/Bldrs-net/bldrs_theme.git
   widget_fader:
     git:
-      url: https://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@github.com/Bldrs-net/widget_fader.git
+      url: https://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@github.com/Bldrs-net/widget_fader.git
   image: ^3.0.8
   websafe_svg: ^2.0.0+1 # will check
 
