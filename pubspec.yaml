@@ -1,6 +1,6 @@
 name: super_image
 description: A Smart widget that renders images on screen.
-version: 0.0.1
+version: 0.0.2
 publish_to: none
 homepage: https://github.com/RagehAz/super_image.git
 
@@ -18,8 +18,8 @@ dependencies:
   widget_fader:
     git:
       url: https://github.com/RagehAz/widget_fader.git
-  image: ^3.0.8
-  websafe_svg: ^2.0.0+1 # will check
+  image: ^3.2.2
+  websafe_svg: ^2.1.2+7
 
 dev_dependencies:
   flutter_test:

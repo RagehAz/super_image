@@ -1,21 +1,19 @@
-import 'dart:typed_data';
 import 'dart:ui' as ui show Image;
 import 'dart:async';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
+import 'package:flutter/foundation.dart';
+import 'package:flutter/painting.dart';
 import 'package:super_image/helpers/helpers.dart';
 
 // --------------------
 /// TESTED : WORKS PERFECT
-Future<ui.Image> getUiImageFromUint8List(Uint8List uInt) async {
+Future<ui.Image> getUiImageFromUint8List(Uint8List bytes) async {
   ui.Image _decodedImage;
 
-  if (uInt != null) {
+  if (bytes != null) {
     await tryAndCatch(
       invoker: 'getUiImageFromUint8List',
       functions: () async {
-        _decodedImage = await decodeImageFromList(uInt);
+        _decodedImage = await decodeImageFromList(bytes);
       },
     );
   }
