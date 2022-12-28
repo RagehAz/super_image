@@ -146,36 +146,30 @@ class ImageSwitcher extends StatelessWidget {
     /// JPG OR PNG
     else if (objectIsJPGorPNG(pic) == true){
 
-      return LocalAssetChecker(
+      return Image.asset(
+        pic,
         key: const ValueKey<String>('SuperImage_png_or_jpg'),
-        asset: pic,
-        child: Image.asset(
-          pic,
-          fit: boxFit,
-          width: width,
-          height: height,
-          errorBuilder: _errorBuilder,
-          scale: 1,
-          gaplessPlayback: _gaplessPlayback,
-          package: package,
-        ),
+        fit: boxFit,
+        width: width,
+        height: height,
+        errorBuilder: _errorBuilder,
+        scale: 1,
+        gaplessPlayback: _gaplessPlayback,
+        package: package,
       );
+
     }
 
     /// SVG
     else if (objectIsSVG(pic) == true){
 
-      return LocalAssetChecker(
-        key: const ValueKey<String>('SuperImage_svg'),
-        asset: pic,
-        child: WebsafeSvg.asset(
+      return WebsafeSvg.asset(
           pic,
           fit: boxFit,
           color: iconColor,
           width: width,
           height: height,
           package: package
-        ),
       );
     }
 
