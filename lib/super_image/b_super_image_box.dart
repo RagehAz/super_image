@@ -29,7 +29,7 @@ class SuperImageBox extends StatelessWidget {
 
     return ClipRRect(
       key: const ValueKey<String>('SuperImageBox'),
-      borderRadius: borderRadius,
+      borderRadius: borderRadius ?? BorderRadius.circular(0),
       child: ColorFiltered(
         colorFilter: ColorFilter.mode(greyscale == true ? Colorz.grey255 : Colorz.nothing, BlendMode.saturation),
         child: Container(
