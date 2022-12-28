@@ -15,6 +15,7 @@ class SuperImage extends StatelessWidget {
     this.backgroundColor,
     this.corners,
     this.greyscale = false,
+    this.package,
     Key key,
   }) : super(key: key);
   /// --------------------------------------------------------------------------
@@ -28,6 +29,7 @@ class SuperImage extends StatelessWidget {
   final Color backgroundColor;
   final dynamic corners;
   final bool greyscale;
+  final String package;
   /// --------------------------------------------------------------------------
   static DecorationImage decorationImage({
     @required String picture,
@@ -65,6 +67,7 @@ class SuperImage extends StatelessWidget {
         iconColor: iconColor,
         loading: loading,
         backgroundColor: backgroundColor,
+        package: package,
       ),
     );
 

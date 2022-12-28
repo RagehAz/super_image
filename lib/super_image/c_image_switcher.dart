@@ -23,6 +23,7 @@ class ImageSwitcher extends StatelessWidget {
     @required this.iconColor,
     @required this.loading,
     @required this.backgroundColor,
+    @required this.package,
     Key key,
   }) : super(key: key);
   /// --------------------------------------------------------------------------
@@ -34,6 +35,7 @@ class ImageSwitcher extends StatelessWidget {
   final Color iconColor;
   final bool loading;
   final Color backgroundColor;
+  final String package;
   // -----------------------------------------------------------------------------
   static const bool _gaplessPlayback = true;
   // --------------------
@@ -155,6 +157,7 @@ class ImageSwitcher extends StatelessWidget {
           errorBuilder: _errorBuilder,
           scale: 1,
           gaplessPlayback: _gaplessPlayback,
+          package: package,
         ),
       );
     }
@@ -171,6 +174,7 @@ class ImageSwitcher extends StatelessWidget {
           color: iconColor,
           width: width,
           height: height,
+          package: package
         ),
       );
     }
