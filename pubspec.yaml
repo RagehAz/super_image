@@ -1,7 +1,7 @@
 name: super_image
 description: A Smart widget that renders images on screen.
 version: 0.0.1
-homepage: https://github.com/Bldrs-net/super_image.git
+homepage: https://github.com/RagehAz/super_image.git
 
 environment:
   sdk: ">=2.10.5 <3.0.0"
@@ -13,10 +13,10 @@ dependencies:
 
   bldrs_theme:
     git:
-      url: https://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@github.com/Bldrs-net/bldrs_theme.git
+      url: https://github.com/RagehAz/bldrs_theme.git
   widget_fader:
     git:
-      url: https://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@github.com/Bldrs-net/widget_fader.git
+      url: https://github.com/RagehAz/widget_fader.git
   image: ^3.0.8
   websafe_svg: ^2.0.0+1 # will check
 
