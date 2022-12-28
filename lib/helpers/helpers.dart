@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
@@ -117,22 +116,6 @@ bool checkListsAreIdentical({
 
 /// FLOATERS
 
-// --------------------
-/// TESTED : WORKS PERFECT
-Future<ui.Image> getUiImageFromUint8List(Uint8List uInt) async {
-  ui.Image _decodedImage;
-
-  if (uInt != null) {
-    await tryAndCatch(
-      invoker: 'getUiImageFromUint8List',
-      functions: () async {
-        _decodedImage = await decodeImageFromList(uInt);
-      },
-    );
-  }
-
-  return _decodedImage;
-}
 // --------------------
 /// TESTED : WORKS PERFECT
 Future<ByteData> getByteDataFromPath(String assetPath) async {
@@ -344,21 +327,7 @@ bool isBase64(dynamic value) {
   }
 
 }
-// --------------------
-/// TESTED : WORKS PERFECT
-bool objectIsUiImage(dynamic object){
-  bool _isUiImage = false;
 
-  if (object != null){
-
-    if (object is ui.Image){
-      _isUiImage = true;
-    }
-
-  }
-
-  return _isUiImage;
-}
 // --------------------
 /// TESTED : WORKS PERFECT
 bool objectIsImgImage(dynamic object){

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
 import 'package:super_image/helpers/helpers.dart';
+import 'package:super_image/helpers/ui_checker.dart';
 import 'package:super_image/super_image/x_infinity_loading_box.dart';
 
 /// DOES NOT CACHE IMAGE
