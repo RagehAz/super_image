@@ -1,9 +1,10 @@
+// ignore_for_file: unnecessary_import
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
-
+import 'dart:typed_data';
 // -----------------------------------------------------------------------------
 
 /// NOTIFIER
