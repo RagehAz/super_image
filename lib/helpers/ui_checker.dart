@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/painting.dart';
 import 'package:super_image/helpers/helpers.dart';
+import 'dart:typed_data';
 
 // --------------------
 /// TESTED : WORKS PERFECT
