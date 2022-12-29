@@ -2,7 +2,6 @@
 
 import 'dart:convert';
 import 'dart:typed_data';
-
 import 'package:bldrs_theme/bldrs_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:super_image/helpers/helpers.dart';
