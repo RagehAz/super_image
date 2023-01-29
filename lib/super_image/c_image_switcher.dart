@@ -1,5 +1,4 @@
 // ignore_for_file: unused_import
-
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:bldrs_theme/bldrs_theme.dart';
@@ -133,7 +132,7 @@ class ImageSwitcher extends StatelessWidget {
     else if (isAbsoluteURL(pic) == true){
 
       return Image.network(
-        pic,
+        pic.trim(),
         key: const ValueKey<String>('SuperImage_url'),
         fit: boxFit,
         width: width,
@@ -142,6 +141,7 @@ class ImageSwitcher extends StatelessWidget {
         gaplessPlayback: _gaplessPlayback,
         loadingBuilder: _loadingBuilder,
       );
+
     }
 
     /// JPG OR PNG

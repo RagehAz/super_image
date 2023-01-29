@@ -161,38 +161,22 @@ Future<void> tryAndCatch({
 
 // --------------------
 /// TESTED : WORKS PERFECT
-bool isAbsoluteURL(dynamic object) {
-  bool _isValidURL = false;
+  bool isAbsoluteURL(dynamic object) {
+    bool _isValidURL = false;
 
-  if (object != null && object is String) {
-    // ----------------------------------
-    /*
-      /// INITIAL CHECK
-      final bool _startsWithHttp = TextCheck.textStartsWithAny(
-        text: object,
-        listThatMightIncludeText: <String>['h', 'ht','htt','http',],
+    if (object != null && object is String) {
+      final String _url = object.trim();
+
+      tryAndCatch(
+        functions: () {
+          final parsedUri = Uri.parse(_url);
+          _isValidURL = parsedUri.isAbsolute;
+        },
       );
-      final bool _startsWithWWW = TextCheck.textStartsWithAny(
-        text: object,
-        listThatMightIncludeText: <String>['www', 'ww','w'],
-      );
-      if (_startsWithHttp == true || _startsWithWWW == true){
-        _isValidURL = true;
-      }
-       */
-    // ----------------------------------
-    /// - EXTRA CHECK
-    // if (_isValidURL == false){
+    }
 
-    _isValidURL = Uri.parse(object).isAbsolute;
-
-    // }
-    ///
-    // ----------------------------------
+    return _isValidURL;
   }
-
-  return _isValidURL;
-}
 // --------------------
 /// TESTED : WORKS PERFECT
 extension FileExtention on FileSystemEntity {
