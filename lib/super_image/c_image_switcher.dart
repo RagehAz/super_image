@@ -5,12 +5,11 @@ import 'package:bldrs_theme/bldrs_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:super_image/helpers/helpers.dart';
 import 'package:super_image/helpers/ui_checker.dart';
-import 'package:super_image/super_image/x_cacheless_image.dart';
-import 'package:super_image/super_image/x_infinity_loading_box.dart';
-import 'package:super_image/super_image/x_local_asset_checker.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'dart:ui' as ui;
 import 'package:image/image.dart' as img;
+
+import '../super_image.dart';
 
 class ImageSwitcher extends StatelessWidget {
   /// --------------------------------------------------------------------------

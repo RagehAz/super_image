@@ -1,6 +1,5 @@
-## 0.0.5
-* fixed url trim bug
-
+## 0.0.6 : restructures
+## 0.0.5 : fixed url trim bug
 ## 0.0.1
 
 * Super Image

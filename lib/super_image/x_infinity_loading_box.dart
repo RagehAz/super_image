@@ -1,6 +1,4 @@
-import 'package:widget_fader/widget_fader.dart';
-import 'package:bldrs_theme/bldrs_theme.dart';
-import 'package:flutter/material.dart';
+part of super_image;
 
 class InfiniteLoadingBox extends StatelessWidget {
   /// --------------------------------------------------------------------------

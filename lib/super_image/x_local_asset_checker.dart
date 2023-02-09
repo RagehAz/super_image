@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:super_image/helpers/helpers.dart';
+part of super_image;
 
 class LocalAssetChecker extends StatefulWidget {
   /// --------------------------------------------------------------------------

@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:super_image/super_image/b_super_image_box.dart';
-import 'package:super_image/super_image/c_image_switcher.dart';
+part of super_image;
 
 class SuperImage extends StatelessWidget {
   /// --------------------------------------------------------------------------

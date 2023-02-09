@@ -1,8 +1,8 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:super_image/helpers/helpers.dart';
-import 'package:super_image/super_image/x_cacheless_image.dart';
-import 'package:super_image/super_image/x_infinity_loading_box.dart';
+
+import '../super_image.dart';
 
 class FutureImage extends StatelessWidget {
   /// --------------------------------------------------------------------------
