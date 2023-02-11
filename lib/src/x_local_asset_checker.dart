@@ -19,9 +19,9 @@ class LocalAssetChecker extends StatefulWidget {
     bool _isFound = false;
 
     if (asset is String){
-      if (stringIsEmpty(asset) == false){
+      if (_stringIsEmpty(asset) == false){
 
-        final ByteData _bytes = await getByteDataFromPath(asset).catchError((Object error){
+        final ByteData _bytes = await Floaters.getByteDataFromPath(asset).catchError((Object error){
 
           // blog('LocalAssetChecker : _checkAsset : error : ${error.toString()}');
 
@@ -39,6 +39,26 @@ class LocalAssetChecker extends StatefulWidget {
     }
 
     return _isFound;
+  }
+    // --------------------
+  /// TESTED : WORKS PERFECT
+  static bool _stringIsEmpty(String string) {
+
+    if (string == null || string == '' || string.isEmpty == true
+
+    // ||
+    // TextMod.cutFirstCharacterAfterRemovingSpacesFromAString(_string) == ''
+    // ||
+    // TextMod.cutFirstCharacterAfterRemovingSpacesFromAString(_string) == null
+
+    ) {
+      return true;
+    }
+
+    else {
+      return false;
+    }
+
   }
   /// --------------------------------------------------------------------------
 }

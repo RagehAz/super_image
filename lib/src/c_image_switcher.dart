@@ -2,9 +2,8 @@
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:bldrs_theme/bldrs_theme.dart';
+import 'package:filers/filers.dart';
 import 'package:flutter/material.dart';
-import 'package:super_image/helpers/helpers.dart';
-import 'package:super_image/helpers/ui_checker.dart';
 import 'package:websafe_svg/websafe_svg.dart';
 import 'dart:ui' as ui;
 import 'package:image/image.dart' as img;
@@ -128,7 +127,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// URL
-    else if (isAbsoluteURL(pic) == true){
+    else if (ObjectCheck.isAbsoluteURL(pic) == true){
 
       return Image.network(
         pic.trim(),
@@ -144,7 +143,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// JPG OR PNG
-    else if (objectIsJPGorPNG(pic) == true){
+    else if (ObjectCheck.objectIsJPGorPNG(pic) == true){
 
       return Image.asset(
         pic,
@@ -161,7 +160,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// SVG
-    else if (objectIsSVG(pic) == true){
+    else if (ObjectCheck.objectIsSVG(pic) == true){
 
       return WebsafeSvg.asset(
           pic,
@@ -174,7 +173,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// FILE
-    else if (objectIsFile(pic) == true){
+    else if (ObjectCheck.objectIsFile(pic) == true){
 
       return Image.file(
         pic,
@@ -262,7 +261,7 @@ class ImageSwitcher extends StatelessWidget {
     // }
 
     /// UINT8LIST
-    else if (objectIsUint8List(pic) == true){
+    else if (ObjectCheck.objectIsUint8List(pic) == true){
 
       return CachelessImage(
         key: const ValueKey<String>('SuperImage_bytes'),
@@ -275,7 +274,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// BASE64
-    else if (isBase64(pic) == true){
+    else if (ObjectCheck.isBase64(pic) == true){
 
       return CachelessImage(
         key: const ValueKey<String>('SuperImage_base64'),
@@ -288,7 +287,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// UI.IMAGE
-    else if (objectIsUiImage(pic) == true){
+    else if (ObjectCheck.objectIsUiImage(pic) == true){
 
       final ui.Image _uiImage = pic;
 
@@ -325,7 +324,7 @@ class ImageSwitcher extends StatelessWidget {
     }
 
     /// IMG.IMAGE
-    else if (objectIsImgImage(pic) == true){
+    else if (ObjectCheck.objectIsImgImage(pic) == true){
 
       final Uint8List _bytes = img.encodeJpg(pic, quality: 100);
 

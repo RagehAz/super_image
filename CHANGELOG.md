@@ -1,11 +1,19 @@
-## 0.0.6 : restructures
-## 0.0.5 : fixed url trim bug
-## 0.0.1
+---
 
-* Super Image
+#### 1.0.0 : Depending on Filers and Mapper methods
+#### 0.0.6 : restructures
+#### 0.0.5 : fixed url trim bug
+#### 0.0.1 : Separated from bldrs_app
+
+---
+
+### Super Image
   * is a smart widget that works with several object types
 
-Supported Object types
+---
+
+### Supported Object types
+
 * null : shows SizedBox()
 * loading : shows InfiniteLoadingBox()
 * absoluteURL : shows Image.network()
@@ -17,3 +25,5 @@ Supported Object types
 * ui.Image : shows RawImage()
 * img.Image : shows CachelessImage()
 * otherwise : shows dvGouran Icon
+
+---

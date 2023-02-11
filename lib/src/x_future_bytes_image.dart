@@ -1,8 +1,4 @@
-import 'dart:typed_data';
-import 'package:flutter/material.dart';
-import 'package:super_image/helpers/helpers.dart';
-
-import '../super_image.dart';
+part of super_image;
 
 class FutureImage extends StatelessWidget {
   /// --------------------------------------------------------------------------
@@ -20,12 +16,24 @@ class FutureImage extends StatelessWidget {
   final double height;
   final BoxFit boxFit;
   final Function(BuildContext, Object, StackTrace) errorBuilder;
-  /// --------------------------------------------------------------------------
+  // --------------------------------------------------------------------------
+  /// TESTED : WORKS PERFECT
+  static bool _connectionIsLoading(AsyncSnapshot<dynamic> snapshot){
+
+    if (snapshot.connectionState == ConnectionState.waiting){
+      return true;
+    }
+    else {
+      return false;
+    }
+
+  }
+  // -----------------------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
 
     /// LOADING
-    if (connectionIsLoading(snapshot) == true){
+    if (_connectionIsLoading(snapshot) == true){
       return InfiniteLoadingBox(
         width: width,
         height: height,
@@ -43,8 +51,9 @@ class FutureImage extends StatelessWidget {
         // errorBuilder: errorBuilder,
         // scale: 1,
       );
+
     }
 
   }
-/// --------------------------------------------------------------------------
+  /// --------------------------------------------------------------------------
 }
